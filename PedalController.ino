@@ -48,16 +48,16 @@ void noteOff(byte pitch) {
 void loop() {
   
   digitalWrite(LOAD,0);
-  delayMicroseconds(1000); // TODO: reduce?
+  delayMicroseconds(10); // TODO: reduce?
   digitalWrite(LOAD,1);
-  delayMicroseconds(1000);
+  delayMicroseconds(10);
 
   for (int pedal = 0; pedal < NUM_PEDALS; pedal++)
   {
     digitalWrite(CLOCK, 0);
-    delayMicroseconds(1000); // TODO: reduce?
+    delayMicroseconds(10); // TODO: reduce?
     if (digitalRead(DATA) != pedals[pedal]) // key has been pressed or released
-    { 
+    {
       if (digitalRead(DATA))
         noteOn(pedal + (octave * 12));
       else
@@ -65,6 +65,6 @@ void loop() {
       pedals[pedal] = digitalRead(DATA); // Update new value to array
     }
     digitalWrite(CLOCK, 1);
-    delayMicroseconds(1000); // TODO: reduce?
+    delayMicroseconds(10); // TODO: reduce?
   }
 }
