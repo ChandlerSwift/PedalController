@@ -2,7 +2,7 @@
 
 An Arduino sketch for my [Arduino MIDI Interface board](https://blog.chandlerswift.com/wp-content/uploads/2017/12/MIDI_Board_Schematic.pdf), for a shift-register-based circuit allowing a single-pedalboard from an Baldwin 125B (?) organ to be interfaced with either a computer over USB-MIDI or a physical MIDI cable.
 
-*The `master` branch only contains physical MIDI functionality. For USB support view the [usb-midi](/ChandlerSwift/PedalController/tree/usb-midi) branch.*
+*The `master` branch only contains physical MIDI functionality. For USB support view the [usb-midi](https://github.com/ChandlerSwift/PedalController/tree/usb-midi) branch.*
 
 ### Testing
 To verify functionality on Linux, use `aseqdump`:
